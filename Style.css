@@ -154,7 +154,7 @@ h6 {
     font-size: large;
 }
 h4 {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.548), rgba(255, 255, 255, 0.2), transparent, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.548));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.629), rgba(255, 255, 255, 0.406), rgba(254, 254, 254, 0.406), rgba(255, 255, 255, 0.548));
     border: double 5px white;
     position: relative;
     left: 5%;
@@ -163,6 +163,7 @@ h4 {
     background-size: 100%;
     margin-bottom: 20px;
     text-align: center;
+    color: black;
 }
 h4 a {
     color: blue;
