@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Assets/Favicon.png">
+    <title>AK Dev. | Developer</title>
+</head>
+<body>
+    <!--Navbar-->
+    <div id="top"></div>
+    <nav class="navbar fixed-top bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand nameNav" href="Assets/favicon.png"><img src="Assets/favicon.png" alt="AK"> AK Developer ║</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="comp">
+            
+            <li class="nav-item" style="padding-top: 15px;">
+              <p><a class="nav-link active customNav" aria-current="page" href="#top">Home</a>
+              <a class="nav-link active customNav" aria-current="page" href="#info">About Me</a>
+              <a class="nav-link active customNav" aria-current="page" href="#projects">My Projects</a>
+              <a class="nav-link active customNav" aria-current="page" href="#footer">Contact & Follow</a>
+              </p>
+            </li>
+          </ul>
+          <button class="btn btn-outline-success" onclick="pop()" style="margin-right: 15px;" id="comp">Hello!</button>
+          <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"><br>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active customNav" aria-current="page" href="#top">Home</a> 
+                <a class="nav-link active customNav" aria-current="page" href="#info">About Me</a>
+                <a class="nav-link active customNav" aria-current="page" href="#projects">My Projects</a>
+                <a class="nav-link active customNav" aria-current="page" href="#footer">Contact & Follow</a>
+                <button class="btn btn-outline-success" onclick="pop()">Hello!</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--Navbar-->
+    <br><br><br><br>
+    
+    <div id="top"></div>
+    <div class="container-fluid">
+      <div>
+          <h1><u>Welcome to AK Dev's Portfolio.</u></h1>
+
+
+        <div class="alert alert-dark" role="alert" id="info">
+          <h2><u>ABOUT ME</u></h2>
+          Hey there! I am A-K Dev. I am a young web developer in Pakistan. I am an experienced, both front-end and back-end web developer. <br>
+          Visit my <a href="https://github.com/Ak-Web-Dev">Github</a> Site
+          <u>My Skills:</u> HTML, CSS, JS, PHP, SQL Database. <br><img src="Assets/favicon.png" class="logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="alert alert-dark" role="alert" id="projects">
+        <h2><u>MY PROJECTS</u></h2><br>
+        <div class="flexBox">
+
+          <div class="card" style="width: 18rem;">
+            <img src="Assets/The A Story Books.png" class="card-img-top" alt="The A Story Books">
+            <div class="card-body">
+              <h5 class="card-title">The A Story Books</h5>
+              <p class="card-text">"The A Story Books" invited me to make an website for them, so I made it.</p>
+              <a href="https://theastorybooks.netlify.app" target="_blank" class="btn btn-primary">See live</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="Assets/chickens.png" class="card-img-top" alt="Dr. Chicken Expert">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Chicken Expert</h5>
+              <p class="card-text">Just got an idea to make a big, descriptive website on chickens. There is information about 50 types of chickens. I named this website "Dr. Chickens Expert".</p>
+              <a href="https://dr-chickens-expert.netlify.app/" target="_blank" class="btn btn-primary">See live</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="Assets/hot-calc.png" class="card-img-top" alt="Hot Calculator">
+            <div class="card-body">
+              <h5 class="card-title">Hot Calculator</h5>
+              <p class="card-text">I learnt how to make a calculator in web development.</p>
+              <a href="https://hot-calculator.netlify.app" target="_blank" class="btn btn-primary">See live</a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="alert alert-dark" id="footer">
+        <h2><u>Contact & Follow</u></h2>
+        Follow me on <a href="https://github.com/Ak-Web-Dev">Github</a>. <br>
+        Feel free to <a href="#footer" onclick="mail()">Contact</a> me. <br>
+        <div class="customNav"><a href="#top" style="color: white; ">Go to Top</a></div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="popup" id="popup">
+          <img src="Assets/hand.gif">
+          <p>Hi there!</p>
+          <h5>From AK-Dev.</h5>
+          <button type="button" class="btn2" onclick="closepopup()">OK</button>
+      </div>
+  </div>
+
+  
+  <!--Script-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
