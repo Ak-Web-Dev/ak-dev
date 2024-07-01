@@ -7,6 +7,5 @@ function closepopup(){
 }
 
 function mail(){
-    alert("Gmail Address: imakbss@gmail.com")
-    alert('Discord')
+    alert("Gmail Address: imakbss@gmail.com __ Discord: ahmed_khan_developer")
 }
