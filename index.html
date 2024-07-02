@@ -116,9 +116,24 @@
           <img src="Assets/hand.gif">
           <p>Hi there!</p>
           <h5>From AK-Dev.</h5>
-          <button type="button" class="btn2" onclick="closepopup()">OK</button>
+          <button type="button" class="btn2" onclick="closepopup()" id="liveToastBtn">OK</button>
       </div>
   </div>
+
+    <!--Toast-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-theme="dark">
+        <div class="toast-header">
+          <strong class="me-auto">Advertisement</strong>
+          <small></small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" style="color: white;">
+          Visit <a href="https://theastorybooks.netlify.app">The A Story Books</a>, Refresh your mind with these stories!
+        </div>
+      </div>
+    </div>
+    <!--Toast-->
 
   
   <!--Script-->
