@@ -29,6 +29,7 @@ h1 {
 }
 body {
     background-image: url(Assets/BD.jpg);
+    background-attachment: fixed;
 }
 .alert-dark {
     background-color: rgba(78, 78, 78, 0.501);
@@ -57,7 +58,7 @@ a {
 }
 .open-popup{
     visibility: visible;
-    top: 60%;
+    top: 30%;
     transform: translate(-50%, -50%) scale(1);
 }
 @media screen and (max-width: 800px){
