@@ -13,7 +13,7 @@ h1 {
 }
 .customNav::after {
     content: '';
-    transition: 0.5s;
+    transition: 0.2s;
 
     height: 3px;
     width: 0;
