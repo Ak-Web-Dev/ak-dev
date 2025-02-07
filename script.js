@@ -1,30 +1,14 @@
-let popup = document.getElementById("popup");
-function pop1(){
-    popup.classList.remove("close-popup")
-    popup.classList.add("open-popup")
+let box = document.getElementById("wait");
+function data(){
+    // Add animation class
+    document.body.classList.add("fade-out");
+            
+    // Delay redirection by 1 second (matching animation duration)
+    setTimeout(function() {
+        window.location.href = "data.html"; // Change this to your target page
+    }, 1000);
 } 
-function close1(){
-    popup.classList.remove("open-popup")
-    popup.classList.add("close-popup")
-}
 
-let popup2 = document.getElementById("popup2");
-function pop2(){
-    popup.classList.remove("open-popup")
-    popup.classList.add("close-popup")
-    popup2.classList.remove("close-popup")
-    popup2.classList.add("open-popup")
-} 
-function close2(){
-    popup2.classList.remove("open-popup")
-    popup2.classList.add("close-popup")
-}
-function remove2(){
-    popup2.classList.remove("open-popup")
-    popup2.classList.add("close-popup")
-    popup.classList.remove("close-popup")
-    popup.classList.add("open-popup")
-}
 
 let helloBox = document.getElementById("hello");
 function hi(){
@@ -32,4 +16,23 @@ function hi(){
 } 
 function bye(){
     helloBox.classList.remove("open-hello")
+}
+
+function home() {
+    document.body.classList.add("fade-out");
+    setTimeout(function() {
+        window.location.href = "index.html"; // Change this to your target page
+    }, 450);
+}
+function pop() {
+    document.body.classList.add("fade-out");
+    setTimeout(function() {
+        window.location.href = "2.html"; // Change this to your target page
+    }, 450);
+}
+function back() {
+    document.body.classList.add("fade-out");
+    setTimeout(function() {
+        window.location.href = "data.html"; // Change this to your target page
+    }, 450);
 }

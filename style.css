@@ -111,31 +111,18 @@ h4 {
 .land:hover{
     color: white;
 }
-.popup {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    border-radius: 6px;
-    position: absolute;
-    top: 200%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    background-image: url(Assets/BD.jpg);
-    visibility: hidden;
-    transition: transform 0s, top 0.5s;
-    margin: 0;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
-.open-popup{
-    visibility: visible;
-    top: 52%;
-    transform: translate(-50%, -50%) scale(1);
-}
-.close-popup{
-    visibility: visible;
-    top: 200%;
-    transform: translate(-50%, -50%) scale(1);
+
+.fade-out {
+    background: black;
+    animation: fadeOut 1s ease-out;
 }
 .btn2 {
     margin-top: 15px;
@@ -150,36 +137,9 @@ h4 {
 .btn2:hover{
     border: solid black 2px;
 }
-.alert {
-    background-color: rgba(78, 78, 78, 0.501);
-    color: white;
-    margin-top: 1%;
-    text-align: center;
-    padding-left: 1%;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-family: sans-serif;
-    border-radius: 8px;
-    border: 0.5px solid white;
-    justify-content: center;
-    align-items: center;
-}
 h2 i {
     font-style: normal;
     color: orangered;
-}
-.alert1 {
-    background-color: rgba(78, 78, 78, 0.501);
-    color: white;
-    margin-top: 1%;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-family: sans-serif;
-    border-radius: 8px;
-    border: 0.5px solid white;
-    padding-bottom: 10px;
 }
 a {
     color: aqua;
@@ -441,5 +401,6 @@ h2{
         z-index: 0;
         cursor: pointer;
         margin: 0;
+        
     }
 }
