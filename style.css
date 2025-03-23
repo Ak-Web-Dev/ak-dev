@@ -111,18 +111,33 @@ h4 {
 .land:hover{
     color: white;
 }
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+.popup {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    background-color: rgb(71, 0, 0);
+    visibility: hidden;
+    transition: transform 0s, top 0.5s;
+    margin: 0;
 }
-
-.fade-out {
-    background: black;
-    animation: fadeOut 1s ease-out;
+.nav {
+    padding: 5px;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.close-popup{
+    visibility: visible;
+    top: 200%;
+    transform: translate(-50%, -50%) scale(1);
 }
 .btn2 {
     margin-top: 15px;
@@ -137,9 +152,45 @@ h4 {
 .btn2:hover{
     border: solid black 2px;
 }
+.alert {
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 10%;
+}
+.alert h6 {
+    color: white;
+    font-size: large;
+}
 h2 i {
     font-style: normal;
     color: orangered;
+}
+.alert .ak em {
+    color: orangered;
+    font-size: 60px;
+}
+.alert .ak {
+    font-family: sans-serif;
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+    margin-top: 35px;
+    margin-bottom: -25px;
+}
+.alert1 {
+    background-color: rgba(78, 78, 78, 0.501);
+    color: white;
+    margin-top: 1%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    border: 0.5px solid white;
+    padding-bottom: 10px;
 }
 a {
     color: aqua;
@@ -196,6 +247,12 @@ h2{
 .live:hover {
     background-color: #0B5ED7;
 }
+.navbar {
+    min-height: 10%;
+}
+.navbar a img {
+    margin-bottom: 5px;
+}
 .card {
     margin: 5px;
     margin-left: 10%;
@@ -221,12 +278,15 @@ h2{
     top: 40%;
     transform: translate(-50%, -50%) scale(1);
 }
+.navbar .btn {
+    margin-right: 5px;
+}
 
 @media screen and (max-width: 800px){
     .hello {
-        width: 200px;
+        width: 300px;
         background-color: white;
-        border-radius: 6px;
+        border-radius: 10px;
         position: absolute;
         top: 0;
         left: 50%;
@@ -237,10 +297,27 @@ h2{
         visibility: hidden;
         transition: transform 0.4s, top 0.4s;
     }
+    .alert .ak em {
+        color: orangered;
+        font-size: 50px;
+    }
+    .alert .ak {
+        font-family: sans-serif;
+        position: relative;
+        font-size: 50px;
+        font-weight: bold;
+        color: red;
+        margin-top: 35px;
+        margin-bottom: -25px;
+        margin-left: 15%;
+    }
     .open-hello{
         visibility: visible;
-        top: 55%;
+        top: 40%;
         transform: translate(-50%, -50%) scale(1);
+    }
+    .hello img {
+        margin-top: 2px;
     }
     .btn2 {
         margin-top: 15px;
@@ -255,7 +332,7 @@ h2{
         max-height: 100vh; /* Ensure the popup fits within the viewport */
         height: 100%; /* Take full height of the viewport if needed */
         overflow-y: auto; /* Allow scrolling only if content overflows */
-        background-color: red;
+        background-color: rgb(71, 0, 0);
         border-radius: 6px;
         position: absolute;
         top: 200%;
@@ -263,7 +340,6 @@ h2{
         transform: translate(-50%, -50%) scale(0.1);
         text-align: center;
         padding: 0 15px 15px;
-        background-image: url(Assets/BD.jpg);
         visibility: hidden;
         transition: transform 0s, top 0.5s;
         margin: 0; /* Ensure no external margins */
@@ -281,18 +357,6 @@ h2{
     body {
         margin: 0;
         overflow: hidden; /* Prevent body scroll */
-    }
-    
-    .alert {
-        background-color: rgba(78, 78, 78, 0.501);
-        color: white;
-        margin: 10px auto; /* Adjust margins for better spacing */
-        width: 98%; /* Ensure it fits on smaller screens */
-        text-align: center;
-        padding: 15px;
-        font-family: sans-serif;
-        border-radius: 8px;
-        border: 0.5px solid white;
     }
     
     .h-list {
@@ -401,6 +465,51 @@ h2{
         z-index: 0;
         cursor: pointer;
         margin: 0;
-        
     }
+    .alert {
+        height: auto;
+        border-radius: 20px;
+        margin-top: 30%;
+        padding: 2px;
+    }
+    .navbar {
+        min-height: 10%;
+    }
+    .navbar a img {
+        margin-bottom: 5px;
+    }
+    .navbar .btn {
+        margin-right: 5px;
+        padding: 4px;
+    }
+}
+.alert::after, .alert::before{
+    content: '';
+    position: absolute;
+    height: 103.5%;
+    width: 100.7%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.alert::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }

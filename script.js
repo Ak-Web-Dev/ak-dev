@@ -1,14 +1,12 @@
-let box = document.getElementById("wait");
-function data(){
-    // Add animation class
-    document.body.classList.add("fade-out");
-            
-    // Delay redirection by 1 second (matching animation duration)
-    setTimeout(function() {
-        window.location.href = "data.html"; // Change this to your target page
-    }, 1000);
+let popup = document.getElementById("popup");
+function pop1(){
+    popup.classList.remove("close-popup")
+    popup.classList.add("open-popup")
 } 
-
+function close1(){
+    popup.classList.remove("open-popup")
+    popup.classList.add("close-popup")
+}
 
 let helloBox = document.getElementById("hello");
 function hi(){
@@ -18,21 +16,18 @@ function bye(){
     helloBox.classList.remove("open-hello")
 }
 
-function home() {
-    document.body.classList.add("fade-out");
-    setTimeout(function() {
-        window.location.href = "index.html"; // Change this to your target page
-    }, 450);
+function project(){
+    window.location.href = "data.html";
 }
-function pop() {
-    document.body.classList.add("fade-out");
-    setTimeout(function() {
-        window.location.href = "2.html"; // Change this to your target page
-    }, 450);
+function back(){
+    window.location.href = "index.html";
 }
-function back() {
-    document.body.classList.add("fade-out");
-    setTimeout(function() {
-        window.location.href = "data.html"; // Change this to your target page
-    }, 450);
+
+function pytuber(){
+    var link = document.createElement('a');
+    link.href = 'Assets/PyTuber.exe';
+    link.download = 'PyTuber.exe';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
