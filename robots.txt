@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ak-dev.is-a.dev/sitemap.xml
