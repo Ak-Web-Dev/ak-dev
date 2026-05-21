@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Dev. | Developer</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="Pics/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+        // Make sure this script runs BEFORE AOS is initialized
+        const width = window.innerWidth;
+      
+        if (width >= 1000 && width <= 1339) {
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.tag-box[data-aos]').forEach(el => {
+              el.removeAttribute('data-aos');
+            });
+      
+            // Now initialize AOS after removing animation on .tag-box
+            AOS.init();
+          });
+        } else {
+          document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+          });
+        }
+    </script>
+    <img class="image-gradient" src="Pics/gradient.png" alt="gradient">
+    <div class="layer-blur" id="top"></div>
+    <div class="container">
+        <header>
+            <h1 data-aos="zoom-in" data-aos-duration="fade-down" class="logo"><img src="Pics/NavIcon.png" alt="AK Dev."></h1>
+            <button class="btn-nav btm-nav-2" data-aos="fade-down" data-aos-duration="1200" onclick="back()">Go Back</button>
+            <button class="btn-nav btm-nav-2" data-aos="fade-down" data-aos-duration="1500" onclick="hi()">Say Hello!</button>
+        </header>
+
+        <main>
+            <div class="content" data-aos="fade-right" data-aos-duration="1500">
+                <div class="tag-box">
+                    <div class="tag">Welcome to the Portfolio of:</div>
+                </div>
+                
+                <h1>AK <em>DEV</em></h1>
+                
+                <p class="description">I AM THE FRONT-END DEVELOPER</p><br />
+                
+                <div class="buttons">
+                    
+                    <a href="#c2" class="btn-get-started">Get in Touch</a>
+                </div>
+                
+            </div>
+            
+        </main>
+        <div id="model"><spline-viewer url="https://prod.spline.design/82srUI5BfSZ7QCVY/scene.splinecode" class="robot-3d"></spline-viewer></div>
+    
+    </div>
+
+    <div class="container2" id="c2"><br /><br />
+        <div id="alert" data-aos="fade-right" data-aos-duration="1500">
+            <h2><u>About Me</u></h2>
+            <p>I am a Young frontend website developer From Pakistan 🇵🇰. I love making websites in HTML and CSS with JavaScript. I can build stunning websites with some animations. See my <a href="https://github.com/Ak-Web-Dev" target="_blank">Github</a> page.</p>
+            <p><u>My Skills:</u> HTML, CSS, JS, PHP for MySQL Database</p><br />
+            <h3><u>Contact & Follow</u></h3>
+            <p>Follow me on <a  href="https://github.com/Ak-Web-Dev" target="_blank">Github</a>.</p>
+            <p>📩Gmail: imakbss@gmail.com | Discord: ahmed_khan_developer</p>
+            <br />
+            <p>This is v4.3D of my portfolio website which is by far, the most animated and complex website i ever made.</p>
+            <p><img src="Pics/favicon.png" alt="AK Dev 3D"></p>
+            <br /><p>Scroll down to see my Projects.</p>
+        </div>
+        <div class="alert" data-aos="fade-right" data-aos-duration="1500">
+        <h2><u>My Projects</u></h2><br />
+        <div class="box">
+            
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="Pics/The A Story Books.png" alt="The A Story Books" class="iimg">
+                <h3>The A Story Books</h3>
+                <p>"The A Story Books" invited me to make an website for them, so I made it.</p>
+                <a class="live" href="https://theastorybooks.netlify.app" target="_blank">See live</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="Pics/chickens.png" alt="Dr Chicken Expert" class="iimg">
+                <h3>Dr. Chickens Expert</h3>
+                <p>Just got an idea to make a big, descriptive website on chickens. There is information about 50 types of chickens. I named this website "Dr. Chickens Expert".</p>
+                <a class="live" href="https://dr-chicken-expert.netlify.app" target="_blank">See live</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="Pics/hot-calc.png" alt="Hot Calculator" class="iimg">
+                <h3>Web Calculator</h3>
+                <p>I learnt how to make a calculator in web development.</p>
+                <a class="live" href="https://hot-calculator.netlify.app/" target="_blank">See live</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="Pics/catOS.png" alt="CatOS" class="iimg">
+                <h3>Cat OS Web</h3>
+                <p>A tiny OS in your webpage. Limited functionality, just for fun.</p>
+                <a class="live" href="https://catos.netlify.app/" target="_blank">See live</a>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="Pics/pytuber.ico" alt="Pytuber" class="iimg">
+                <h3>Pytuber</h3>
+                <p>A free youtube downloader made with python. Download videos upto 720p for free. The python files are compressed to an ".exe" file</p>
+                <a class="live" onclick="d1()" target="_blank">Download</a>
+            </div>
+
+        </div></div>
+    </div>
+
+    <div class="c3">
+        <div class="hello" id="hello">
+            <img src="Pics/hand.gif" alt="h">
+            <p style="font-size: x-large;">Hi there!</p>
+            <p>From AK-Dev.</p>
+            <button type="button" class="btn2" onclick="bye()">OK</button>
+        </div>
+    </div>
+
+    <br /><div class="foot"><h6>AK Web Developer</h6><a href="#top">Go to Top</a></div>
+
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script2.js"></script>
+    <script>
+    let helloBox = document.getElementById("hello");
+    function hi(){
+        console.log()
+        helloBox.classList.add("open-hello")
+    } 
+    function bye(){
+        helloBox.classList.remove("open-hello")
+    }
+    </script>
+</body>
+</html>

@@ -31,7 +31,7 @@
                 <a class="nav-link active customNav" aria-current="page" href="#top">Home</a>
                 <a class="nav-link active customNav" aria-current="page" href="#about">About</a>
                 <a class="nav-link active customNav" aria-current="page" href="#projects">Projects</a>
-                <a class="nav-link active customNav" aria-current="page" href="#ak3d">AK-3D</a>
+                <a class="nav-link active customNav" aria-current="page" data-bs-toggle="modal" data-bs-target="#forward" style="cursor: pointer;">AK-3D</a>
                 </ul>
                 <form class="d-flex" role="search" data-aos="fade-down" data-aos-duration="1000">
                 <button class="btn btn-outline-success" type="button" onclick="hi()">Hello</button>
@@ -137,11 +137,6 @@
             <!-- Duplicate the card below for more projects -->
         </section>
 
-        <div class="alert alert-dark" role="alert" id="ak3d" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
-            <h2><u>AK 3D</u></h2>
-            <p>Coming Soon...</p>
-        </div>
-
         <footer>
             <p>AK Web Dev. | Experiencing innovation in web development since 2022</p>
         </footer>
@@ -155,6 +150,24 @@
         <p style="font-size: x-large;">Hi there!</p>
         <p>From AK-Dev.</p>
         <button type="button" class="btn2" onclick="bye()">OK</button>
+    </div>
+
+    <div class="modal fade" data-bs-theme="dark" id="forward" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">⚠️ Warning!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You are going to see a hardware-heavy version of this site containing a 3D model. Only continue if your device is powerful enough to render a 3D model.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="forwarded()">Visit AK-Dev 3D</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
