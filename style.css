@@ -526,3 +526,11 @@ footer p {
     }
 
 }
+.modal-body img {
+    width: 80%;
+    border-radius: 20px;
+    user-select: none;
+}
+.modal-body p {
+    text-align: center;
+}
