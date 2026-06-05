@@ -58,7 +58,3 @@ function land() {
     behavior: "smooth"
   });
 }
-
-function forwarded() {
-  window.location.href = "index2.html";
-}
