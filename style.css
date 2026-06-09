@@ -525,6 +525,17 @@ footer p {
         background: green;
     }
 
+    .timeline {
+        margin: 50px auto;
+    }
+    .timeline::after {
+        left: 31px;
+        margin-left: 0;
+    }
+    .right-container {
+        left: 0;
+    }
+
 }
 .modal-body img {
     width: 80%;
@@ -533,4 +544,110 @@ footer p {
 }
 .modal-body p {
     text-align: center;
+}
+
+.timeline {
+    background: #2D364B;
+    padding: 20px;
+    scroll-margin-top: 80px;
+    margin-right: 2%;
+    margin-left: 2%;
+    border-radius: 20px;
+    position: relative;
+}
+.timeline-container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    border-radius: 10px;
+}
+.time-box {
+    padding: 20px 30px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    font-size: 15px;
+    z-index: 2;
+    text-align: left;
+}
+.time-box h2, .time-box p {
+    color: black;
+}
+.left-container {
+    left: 0;
+}
+.right-container {
+    left: 50%;
+}
+.timeline-container img {
+    position: absolute;
+    width: 90px;
+    border-radius: 50%;
+    right: -30px;
+    top: 28px;
+    z-index: 10;
+}
+.right-container img {
+    left: -45px;
+}
+.left-container img {
+    right: -48px;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    left: 50%;
+    top: 0;
+    margin-left: -3px;
+    z-index: 1;
+    animation: moveline 3s linear forwards;
+}
+.time-box h2 {
+    font-weight: 600;
+}
+.time-box small {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.th {
+    position: relative;
+    z-index: 20;
+    margin-left: -50%;
+    color: cyan;
+}
+.left-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+}
+.right-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+}
+
+@keyframes moveline {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
 }
