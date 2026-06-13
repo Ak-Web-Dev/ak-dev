@@ -62,3 +62,20 @@ function land() {
 function forwarded() {
   window.location.href = "index2.html";
 }
+
+const timeline = document.querySelector(".timeline");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            timeline.classList.add("visible");
+
+            // Prevent animation from restarting
+            observer.unobserve(timeline);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+observer.observe(timeline);
