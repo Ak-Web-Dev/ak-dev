@@ -1,39 +1,4 @@
-new FinisherHeader({
-  "count": 30,
-  "size": {
-    "min": 26,
-    "max": 60,
-    "pulse": 0
-  },
-  "speed": {
-    "x": {
-      "min": 0,
-      "max": 0.2
-    },
-    "y": {
-      "min": 0,
-      "max": 0.5
-    }
-  },
-  "colors": {
-    "background": "#181C2E",
-    "particles": [
-      "#bf0000",
-      "#ec9100",
-      "#bf0000"
-    ]
-  },
-  "blending": "overlay",
-  "opacity": {
-    "center": 1,
-    "edge": 1
-  },
-  "skew": 0,
-  "shapes": [
-    "t",
-    "c"
-  ]
-});
+new FinisherHeader({ "count": 10, "size": { "min": 1300, "max": 1500, "pulse": 0.2 }, "speed": { "x": { "min": 0.1, "max": 0.6 }, "y": { "min": 0.1, "max": 0.6 } }, "colors": { "background": "#9138e5", "particles": [ "#ff4848", "#000000", "#2235e5", "#000000", "#ff0000" ] }, "blending": "overlay", "opacity": { "center": 0.5, "edge": 0.05 }, "skew": -2, "shapes": [ "c" ] }); 
 
 function d1(){
   var link = document.createElement('a');
